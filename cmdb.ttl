@@ -24,17 +24,22 @@ cmdb:fileshare
 	rdfs:comment "A fileshare service" .
 
 #Reliability and Availability
-cmdb:availabilityDependsOn: 
+cmdb:rootAvailabilityNode 
+	a rdfs:Class ;
+	rdfs:label "The Root for a service dependency graph" ;
+	rdfs:comment "All Service Catalog Items have exactly one of these" .
+
+cmdb:availabilityDependsOn 
 	rdfs:label "Depends On for Availability" ;
 	rdfs:comment "A Dependency relating two entities where the subject depends on the object for reliability" .
 
-cmdb:isHighlyAvailable:
+cmdb:isHighlyAvailable
 	a rdf:Property;
 	rdfs:label "isHighlyAvailable" ;
 	rdfs:comment "Means that the entity can maintain at least failure with no (or very little) downtime" .
 
 #security
-cmdb:mustProvideAccessTo: 
+cmdb:mustProvideAccessTo 
 	rdfs:label "Needs Access To" ;
 	rdfs:comment "Points to a group of users who need access to this system" .
 

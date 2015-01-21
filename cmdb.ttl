@@ -24,6 +24,11 @@ cmdb:fileshare
 	rdfs:comment "A fileshare service" .
 
 #Reliability and Availability
+cmdb:serviceDependencyGraph
+	a rdfs:Class ;
+	rdfs:label "Service Dependency Graph" ;
+	rdfs:comment "This is a graph of dependencies for a service in a Service Catalog " .
+
 cmdb:rootAvailabilityNode 
 	a rdfs:Class ;
 	rdfs:label "The Root for a service dependency graph" ;
